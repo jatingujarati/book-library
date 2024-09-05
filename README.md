@@ -47,7 +47,7 @@ Ensure that you have the following installed:
 ### Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/jatingujarati/book-library.git
 cd book-library
 ```
 
