@@ -1,0 +1,27 @@
+{
+  "name": "book_library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "install": "concurrently \"npm run install:frontend\" \"npm run install:backend\"",
+    "install:frontend": "cd front-end && npm i",
+    "install:backend": "cd back-end && npm i",
+    "project:setup": "npm run setup:frontend && npm run setup:backend",
+    "setup:frontend": "cp-cli front-end/.env.example front-end/.env",
+    "setup:backend": "cp-cli back-end/.env.example back-end/.env",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd front-end && npm start",
+    "start:backend": "cd back-end && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cp-cli": "^2.0.0"
+  }
+}
