@@ -48,7 +48,7 @@ Ensure that you have the following installed:
 
 ```bash
 git clone <your-repository-url>
-cd book_library
+cd book-library
 ```
 
 ### Install Dependency
